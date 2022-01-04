@@ -1,5 +1,5 @@
 CREATE TABLE authors_TB(
-    ID SERIAL PRIMARY KEY NOT NULL,
+    authorID SERIAL PRIMARY KEY NOT NULL,
     firstName   TEXT    NOT NULL,
     lastName    TEXT    NOT NULL,
     penName     TEXT    NOT NULL,
