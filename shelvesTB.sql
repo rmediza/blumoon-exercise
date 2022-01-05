@@ -14,7 +14,7 @@ CREATE TABLE shelves_TB(
     shelvesID SERIAL PRIMARY KEY NOT NULL,
     levelID          INT    NOT NULL,
     dateCreated      DATE   NOT NULL,
-    CONSTRAINT fk_levels
+    CONSTRAINT fk_level
       FOREIGN KEY(levelID) 
 	  REFERENCES levels(levelID)
 );
