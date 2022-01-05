@@ -11,7 +11,7 @@ CREATE TABLE level_TB(
     PRIMARY KEY(levelID),
     CONSTRAINT fk_shelf
       FOREIGN KEY(shelfID) 
-	  REFERENCES shelfs(shelfID)
+	  REFERENCES shelf_TB(shelfID)
 );
 
 CREATE TABLE shelves_TB(
@@ -21,7 +21,7 @@ CREATE TABLE shelves_TB(
     PRIMARY KEY(levelID),
     CONSTRAINT fk_level
       FOREIGN KEY(levelID) 
-	  REFERENCES levels(levelID)
+	  REFERENCES level_TB(levelID)
 );
 
 
