@@ -9,9 +9,9 @@ CREATE TABLE level_TB(
     levelID INT GENERATED ALWAYS AS IDENTITY,
     shelfID        INT    NOT NULL,
     PRIMARY KEY(levelID),
-    CONSTRAINT fk_level
-      FOREIGN KEY(levelID) 
-	  REFERENCES levels(levelID)
+    CONSTRAINT fk_shelf
+      FOREIGN KEY(shelfID) 
+	  REFERENCES shelfs(shelfID)
 );
 
 CREATE TABLE shelves_TB(
