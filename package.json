@@ -1,0 +1,27 @@
+{
+  "name": "blumoon-exercise",
+  "version": "1.0.0",
+  "description": "node project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmediza/blumoon-exercise.git"
+  },
+  "author": "Ed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmediza/blumoon-exercise/issues"
+  },
+  "homepage": "https://github.com/rmediza/blumoon-exercise#readme",
+  "dependencies": {
+    "fastify": "^3.25.3",
+    "knex": "^0.95.15",
+    "semistandard": "^16.0.1",
+    "tap": "^15.1.6"
+  }
+}
+
+
