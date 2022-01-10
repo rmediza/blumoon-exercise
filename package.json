@@ -4,10 +4,10 @@
   "description": "node project",
   "main": "index.js",
   "scripts": {
-    "test": "semistandard && node my-normal-tests-littered-with-semicolons.js"
+    "test": "semistandard"
   },
   "devDependencies": {
-    "semistandard": "*"
+    "semistandard": "^16.0.1"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,6 @@
   "dependencies": {
     "fastify": "^3.25.3",
     "knex": "^0.95.15",
-    "semistandard": "^16.0.1",
     "tap": "^15.1.6"
   }
 }
-
-
