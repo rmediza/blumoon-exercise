@@ -1,10 +1,14 @@
 CREATE TABLE shelf_TB(
     shelfID serial PRIMARY KEY,
-    category       TEXT   NOT NULL,
-    location       TEXT   NOT NULL
+    category   TEXT   NOT NULL,
+    location   TEXT   NOT NULL
 );
 
 CREATE TABLE level_TB(
     levelID serial PRIMARY KEY,
-    dCreated date NOT NULL
+    shelfID INT  NOT NULL,
+    dCreated DATE NOT NULL,
+    FOREIGN KEY (shelfID)
+         REFERENCES shelf_TB (shelfID)
 );
+
