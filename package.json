@@ -6,6 +6,9 @@
   "scripts": {
     "test": "semistandard && node my-normal-tests-littered-with-semicolons.js"
   },
+  "devDependencies": {
+    "semistandard": "*"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rmediza/blumoon-exercise.git"
