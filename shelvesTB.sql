@@ -5,18 +5,6 @@ CREATE TABLE shelf_TB(
 );
 
 CREATE TABLE level_TB(
-    levelID INT GENERATED ALWAYS AS IDENTITY,
-    bookID  INT  NOT NULL,
-    PRIMARY KEY(levelID)
+    levelID serial PRIMARY KEY,
+    dCreated date NOT NULL
 );
-
-CREATE TABLE shelves_TB(
-    shelvesID INT GENERATED ALWAYS AS IDENTITY,
-    levelID        INT    NOT NULL,
-    dateCreated    DATE   NOT NULL,
-    PRIMARY KEY(shelvesID),
-    CONSTRAINT fk_level
-      FOREIGN KEY(levelID) 
-	  REFERENCES level_TB(levelID)
-);
-
