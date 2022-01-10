@@ -5,5 +5,6 @@ test('Adding of two numbers', ({ equal, end }) => {
   equal(sum(3, 2), 5, 'Adding 3 and 2 equal to 5');
   equal(sum(27, 15), 42, 'Adding 27 and 15 equal to 42');
   equal(sum(124, 38), 162, 'Adding 124 and 38 equal to 162');
+  equal(sum(1000, 250), 1250, 'Adding 1000 and 38 equal to 250');
   end();
 });
