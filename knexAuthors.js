@@ -1,11 +1,12 @@
-const knex = require('knex');
+// const knex = require('knex');
 
-knex.schema.droptableifExist('authorsTB').createTable('authorsTB', function (table) {
-  table.increments('authorID').primary();
-  table.text('firstName').notNullable();
-  table.text('lastName').notNullable();
-  table.text('penName').notNullable();
-  table.date('bDate').notNullable();
-  table.time('created_at').notNullable();
-  table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable();
-});
+// knex.schema.dropTableIfExists('authorsTB').createTable('authorsTB', function (table) {
+//   table.increments('authorID').primary();
+//   table.text('firstName').notNullable();
+//   table.text('lastName').notNullable();
+//   table.text('penName').notNullable();
+//   table.date('bDate').notNullable();
+//   table.time('created_at').notNullable();
+//   table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable();
+// });
+

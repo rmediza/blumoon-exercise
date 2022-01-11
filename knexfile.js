@@ -7,7 +7,7 @@ module.exports = {
     connection: {
       host: 'localhost',
       port: '5432',
-      user: 'postgre',
+      user: 'postgres',
       password: 'pgcol45',
       database: 'devDB',
       charset: 'utf8'
@@ -18,7 +18,7 @@ module.exports = {
     client: 'pg',
     connection: {
       database: 'devDB',
-      user: 'postgre',
+      user: 'postgres',
       password: 'pgcol45'
     },
     pool: {
@@ -34,7 +34,7 @@ module.exports = {
     client: 'pg',
     connection: {
       database: 'devdb',
-      user: 'postgre',
+      user: 'postgres',
       password: 'pgcol45'
     },
     pool: {
