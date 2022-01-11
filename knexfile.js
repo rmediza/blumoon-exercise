@@ -12,5 +12,38 @@ module.exports = {
       database: 'devDB',
       charset: 'utf8'
     }
+  },
+
+  staging: {
+    client: 'pg',
+    connection: {
+      database: 'devDB',
+      user: 'postgre',
+      password: 'pgcol45'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    }//,
+    // migrations: {
+    //   tableName: 'knex_migrations'
+    // }
+  },
+
+  production: {
+    client: 'pg',
+    connection: {
+      database: 'devdb',
+      user: 'postgre',
+      password: 'pgcol45'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    }//,
+    // migrations: {
+    //   tableName: 'knex_migrations'
+    // }
   }
+
 };
