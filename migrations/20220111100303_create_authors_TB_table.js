@@ -6,11 +6,10 @@ exports.up = function (knex) {
     table.text('lastName').notNullable();
     table.text('penName').notNullable();
     table.date('bDate').notNullable();
-    table.time('created_at').notNullable();
-    table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable();
+    table.timestamp('created_at').defaultTo(knex.fn.now());
   });
 };
 
 exports.down = function (knex) {
-  return knex.schema.dropTableIfExists('authorsTB');
+  return knex.schema.dropTable('authorsTB');
 };

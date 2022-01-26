@@ -1,5 +1,4 @@
 // Update with your config settings.
-
 module.exports = {
 
   development: {
@@ -33,7 +32,7 @@ module.exports = {
   production: {
     client: 'pg',
     connection: {
-      database: 'devdb',
+      database: 'devDB',
       user: 'postgres',
       password: 'pgcol45'
     },
@@ -45,5 +44,4 @@ module.exports = {
     //   tableName: 'knex_migrations'
     // }
   }
-
 };
