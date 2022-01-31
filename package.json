@@ -4,7 +4,9 @@
   "description": "node project",
   "main": "index.js",
   "scripts": {
-    "test": "semistandard"
+    "test": "semistandard",
+    "seed": "knex seed:run",
+    "migrate": "knex migrate:latest"
   },
   "devDependencies": {
     "semistandard": "^16.0.1"
@@ -22,6 +24,7 @@
   "dependencies": {
     "fastify": "^3.25.3",
     "knex": "^0.95.15",
+    "pg": "^8.7.1",
     "tap": "^15.1.6"
   }
 }
