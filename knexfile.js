@@ -8,8 +8,7 @@ module.exports = {
       port: '5432',
       user: 'postgres',
       password: 'pgcol45',
-      database: 'devDB',
-      charset: 'utf8'
+      database: 'devDB'
     }
   },
 
