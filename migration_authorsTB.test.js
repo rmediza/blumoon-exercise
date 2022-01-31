@@ -12,12 +12,11 @@ const knex = require('knex')({
 
 const testTables = function (knex) {
   return knex.schema.hasTable('authorsTB');
-  });
 };
 
 // to check, result, message
-test('Checking if Table exist', ({ equal }) => {
-  let y = await testTables(knex);
+test('Checking if Table exist', async ({ equal }) => {
+  const y = await testTables(knex);
   equal(y, true, 'authorsTB must ok for expected result is true');
 });
 
