@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/rmediza/blumoon-exercise#readme",
   "dependencies": {
+    "axios": "^0.25.0",
     "fastify": "^3.25.3",
     "knex": "^0.95.15",
     "pg": "^8.7.1",
