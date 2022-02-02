@@ -3,3 +3,4 @@
 /seeds
 /.nyc_output
 package-lock.json
+fastify_server.test.js
