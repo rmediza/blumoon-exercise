@@ -1,6 +1,6 @@
 'use strict';
 
-const server = require('./app')({
+const server = require('./fastify_server')({
   logger: {
     level: 'info',
     prettyPrint: true

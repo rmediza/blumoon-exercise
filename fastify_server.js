@@ -1,12 +1,15 @@
 // Require the framework and instantiate it
-const fastify = require('fastify')({ logger: true });
+const fastify = require('fastify');
 
 // Declare a route
-function build () {
-  fastify.get('/', async () => {
+function build (opts = {}) {
+  const app = fastify(opts);
+
+  app.get('/', async () => {
     return 'Welcome to Fastify Server';
   });
-  return fastify;
+  
+  return app;
 }
 
 // // Start the server
