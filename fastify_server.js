@@ -1,5 +1,6 @@
 // Require the framework and instantiate it
 const fastify = require('fastify');
+const routes = require('./authorRoute');
 
 // Declare a route
 function build (opts = {}) {
@@ -7,6 +8,10 @@ function build (opts = {}) {
 
   app.get('/', async () => {
     return 'Welcome to Fastify Server';
+  });
+
+  routes.forEach((route, index) => {
+    app.route(route);
   });
 
   return app;
