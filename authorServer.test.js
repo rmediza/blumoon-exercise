@@ -42,11 +42,13 @@ test('requests get, post, put, delete', async ({ equal }) => {
     }
   );
 
-  equal(root.statusCode, 200, 'root status code of 200');
-
   // equal get post put del
-  equal(get.statusCode, 200, 'get status code of 200');
-  equal(post.statusCode, 200, 'post status code of 200');
-  equal(put.statusCode, 200, 'put status code of 200');
-  equal(del.statusCode, 200, 'delete status code of 200');
+  equal(get.statusCode, 200, `get status code of 200 Response: ${get.body}`);
+
+  equal(post.statusCode, 200, `post status code of 200 Reponse: ${post.body}`);
+
+  equal(put.statusCode, 200, `put status code of 200 Reponse: ${put.body}`);
+
+  equal(del.statusCode, 200, `delete status code of 200 Reponse: ${del.body}`);
+  
 });
