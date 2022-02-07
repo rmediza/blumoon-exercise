@@ -8,7 +8,7 @@ function build (opts = {}) {
   app.get('/', async () => {
     return 'Welcome to Fastify Server';
   });
-  
+
   return app;
 }
 
