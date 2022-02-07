@@ -2,8 +2,7 @@
 
 const server = require('./fastify_server')({
   logger: {
-    level: 'info',
-    prettyPrint: true
+    level: 'info'
   }
 });
 
