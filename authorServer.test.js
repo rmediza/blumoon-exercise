@@ -2,15 +2,18 @@
 const { test } = require('tap');
 const build = require('./fastify_server');
 
+const exRes = [
+  { msg: 'Author with ID 1 is deleted' },
+  { id: 1, author: 'john' },
+  { id: 5, author: 'mike' },
+  { id: 1, author: 'Stephen King' },
+  { id: 2, author: 'J.K Rowling' },
+  { id: 3, author: 'John Grisham' },
+  { id: 4, author: 'Dan Brown' }
+];
+
 test('requests get, post, put, delete', async ({ equal }) => {
   const app = build();
-
-  const root = await app.inject(
-    {
-      method: 'GET',
-      url: '/'
-    }
-  );
 
   const get = await app.inject(
     {
@@ -43,12 +46,11 @@ test('requests get, post, put, delete', async ({ equal }) => {
   );
 
   // equal get post put del
-  equal(get.statusCode, 200, `get status code of 200 Response: ${get.body}`);
+  equal((JSON.parse(get.body)[0].author), exRes[3].author, 'GET Response');
 
-  equal(post.statusCode, 200, `post status code of 200 Reponse: ${post.body}`);
+  equal(JSON.parse(post.body).id, exRes[2].id, 'POST Response');
 
-  equal(put.statusCode, 200, `put status code of 200 Reponse: ${put.body}`);
+  equal(JSON.parse(put.body).id, exRes[1].id, 'PUT Response');
 
-  equal(del.statusCode, 200, `delete status code of 200 Reponse: ${del.body}`);
-  
+  equal(JSON.parse(del.body).msg, exRes[0].msg, 'DELETE Response');
 });
