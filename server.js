@@ -1,5 +1,6 @@
 'use strict';
 
+// const knex = require('knex');
 const server = require('./fastify_server')({
   logger: {
     level: 'info'
